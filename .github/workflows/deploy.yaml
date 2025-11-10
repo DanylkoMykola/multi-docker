@@ -10,15 +10,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t mykoladanylko/react-test -f ./client/Dockerfile.dev ./client
-      - run: docker run -e CI=true mykoladanylko/react-test npm test
+      - run: docker build -t mykola123danylko/react-test -f ./client/Dockerfile.dev ./client
+      - run: docker run -e CI=true mykola123danylko/react-test npm test
 
-      - run: docker build -t mykoladanylko/multi-client ./client
-      - run: docker build -t mykoladanylko/multi-nginx ./nginx
-      - run: docker build -t mykoladanylko/multi-server ./server
-      - run: docker build -t mykoladanylko/multi-worker ./worker
+      - run: docker build -t mykola123danylko/multi-client ./client
+      - run: docker build -t mykola123danylko/multi-nginx ./nginx
+      - run: docker build -t mykola123danylko/multi-server ./server
+      - run: docker build -t mykola123danylko/multi-worker ./worker
 
-      - run: docker push mykoladanylko/multi-client
-      - run: docker push mykoladanylko/multi-nginx
-      - run: docker push mykoladanylko/multi-server
-      - run: docker push mykoladanylko/multi-worker
+      - run: docker push mykola123danylko/multi-client
+      - run: docker push mykola123danylko/multi-nginx
+      - run: docker push mykola123danylko/multi-server
+      - run: docker push mykola123danylko/multi-worker
